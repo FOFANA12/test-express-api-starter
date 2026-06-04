@@ -24,7 +24,7 @@ export default class CommandeRepository {
     return { commandes: CommandeRepository.commandes };
   };
 
-  sotre = (data) => {
+  store = (data) => {
     let total = 0;
     data.items.forEach(item => {
       total += TarifService.calculTotalLigne(item.price, item.qty);

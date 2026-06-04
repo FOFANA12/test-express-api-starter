@@ -29,9 +29,11 @@ describe("Test Commande Repository", () => {
     const res = repository.index();
     const size = res.commandes.length;
 
-    const createdOrder = repository.sotre(data);
+    const createdOrder = repository.store(data);
 
-    expect(createdOrder.commandes).toHaveLength(size+1);
-    expect(createdOrder.commandes[createdOrder.commandes.length-1]).toHaveProperty("client");
+    expect(createdOrder.commandes).toHaveLength(size + 1);
+    expect(
+      createdOrder.commandes[createdOrder.commandes.length - 1],
+    ).toHaveProperty("client");
   });
 });
