@@ -10,10 +10,10 @@ export default class CommandeController {
     return resp.status(StatusCodes.OK).json({ commandes: result.commandes });
   };
 
-  sotre = (req, resp, next) => {
+  store = (req, resp, next) => {
     const { client, items } = req.body;
 
-    const result = this.repository.sotre({ client, items });
+    const result = this.repository.store({ client, items });
 
     return resp
       .status(StatusCodes.CREATED)
